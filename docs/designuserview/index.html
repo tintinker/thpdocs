@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Design User View - </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.aad43d4ecb69a264f2539b89d7f779d5f3cdff22e7585fe5fc3c77272f1c2696.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img alt="Logo" src="/" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img alt="Logo" src="/" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-home">
+      <a href="/">
+        <span>Home</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-docs">
+      <a href="/docs/">
+        <span>Docs</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="active ">
+      <a href="/docs/designuserview/">Design User View</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/common/">Components Used in Both Survey and Design</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/designpaths/">Design Paths</a>
+    </li>
+    
+    <li class="">
+      <a href="/docs/design/">Design Docs</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">Design User View</h1>
+<div class="content ">
+  <h2 id="design-user-view">Design User View</h2>
+<p><em>js/src/designcomps/designuserview.js</em></p>
+<p>Landing Page for Design side, presents list of available templates and option to create a template</p>
+<h3 id="state-variables">State Variables</h3>
+<ul>
+<li>
+<p><code>template_rows</code><br>
+Stores the meta data for each template:
+{name, email, created, lastModified, id}<br>
+Populated by <code>loadData()</code></p>
+</li>
+<li>
+<p><code>filter</code><br>
+Text from the filter input, used in <code>render()</code>. Only template  rows whose <code>name</code> or <code>email</code>fields contain this text will be shown<br>
+Updated by anonymous function, in the <code>onChange</code> handler of the <code>filterInput</code> field in <code>render()</code></p>
+</li>
+<li>
+<p><code>order_by</code><br>
+One of {&ldquo;Titile&rdquo;, &ldquo;AuthorEmail&rdquo;, &ldquo;Created&rdquo;, or &ldquo;Modified}<br>
+Must match the field names in firestore<br>
+used when requests are loaded in <code>loadData()</code><br>
+Set via anonymous function in the <code>onClick</code>handler for teh <code>order_by</code> dropdown</p>
+</li>
+<li>
+<p><code>order_by_direction</code><br>
+One of {&ldquo;asc&rdquo;, &ldquo;desc&rdquo;}<br>
+used when requests are loaded in <code>loadData()</code><br>
+Set via anonymous function in the <code>onClick</code> handler for the <code>order_by_direction</code> dropdown</p>
+</li>
+</ul>
+<h3 id="functions">Functions</h3>
+<ul>
+<li><code>loadData()</code></li>
+<li><code>deleteTemplate()</code></li>
+<li><code>convertTemplateInfoToRow(template, index)</code><br>
+Template is an item from <code>state.template_info</code> and <code>index</code> is the item&rsquo;s index in the <code>state.template_info</code> array<br>
+If <code>state.filter</code> is included in the name or author email, a <code>&lt;li&gt;</code> is generated with info about the list. Every column, but the trash (delete) links to the template&rsquo;s edit page.</li>
+</ul>
+<h3 id="rendering">Rendering</h3>
+<ul>
+<li>
+<p>Maps template metadata from <code>state.template_info</code> to <code>&lt;li&gt;</code>'s using <code>convertTemplateInfoToRow</code></p>
+</li>
+<li>
+<p>General Components</p>
+</li>
+</ul>
+<ol>
+<li>Welcome Message</li>
+<li>Create New Template (links to <a href="/docs/design/createnewtemplate">DesignCreateNewTemplate</a>)</li>
+<li>Filtering Options</li>
+<li>Table of Template Info</li>
+</ol>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          <ul>
+            <li class="zerostatic"><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.1237ff71925bb8625c97a9af8db4c54525258bedfd7c47493daaff723bea755e.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>THP Design and Survey Docs on </title>
+    <link>/</link>
+    <description>Recent content in THP Design and Survey Docs on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 28 Nov 2018 15:14:39 +1000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Design User View</title>
+      <link>/docs/designuserview/</link>
+      <pubDate>Thu, 04 Jun 2020 21:58:47 -0400</pubDate>
+      
+      <guid>/docs/designuserview/</guid>
+      <description>Design User View js/src/designcomps/designuserview.js
+Landing Page for Design side, presents list of available templates and option to create a template
+State Variables   template_rows
+Stores the meta data for each template: {name, email, created, lastModified, id}</description>
+    </item>
+    
+    <item>
+      <title>Components Used in Both Survey and Design</title>
+      <link>/docs/common/</link>
+      <pubDate>Thu, 04 Jun 2020 20:50:50 -0400</pubDate>
+      
+      <guid>/docs/common/</guid>
+      <description>Design and Survey Share a few components:
+CommonMenu js/src/commoncomps/CommonMenu.js
+Present on all pages, contains the header, logo, link to homepage and sign out button
+CommonAuthGate js/src/commoncomps/CommonAuthGate.js
+If the user is logged in, renders</description>
+    </item>
+    
+    <item>
+      <title>Design Paths</title>
+      <link>/docs/designpaths/</link>
+      <pubDate>Thu, 04 Jun 2020 20:50:00 -0400</pubDate>
+      
+      <guid>/docs/designpaths/</guid>
+      <description>List of URLs on the Design Side design No Paramaters
+Homepage, list of available templates and options to create new templates.
+Renders DesignUserView
+/design/create/template No Paramaters
+Creates new template
+Renders DesignCreateTemplate</description>
+    </item>
+    
+    <item>
+      <title>Design Docs</title>
+      <link>/docs/design/</link>
+      <pubDate>Thu, 04 Jun 2020 20:48:55 -0400</pubDate>
+      
+      <guid>/docs/design/</guid>
+      <description>Routing (Full List) Click here for an overview of url routing on the design side
+Pages Home Page - List of Previously Created Templates See DesignUserView
+View/Edit Template Page See DesignTemplateView</description>
+    </item>
+    
+  </channel>
+</rss>
